@@ -53,7 +53,7 @@ body {
 /* Estilos del menú hamburguesa */
 .header .menu-icon i {
     font-size: 30px
-    color: white;
+    
 }
 
 .header .menu-icon i:hover {
@@ -69,7 +69,6 @@ body {
 
 /* Estilos del menú lateral */
 .side-menu {
-    
     position: fixed;
     top: 0;
     left: -250px; 
@@ -79,7 +78,24 @@ body {
     padding: 20px;
     transition: left 0.3s;
     border: solid 1px;
+    z-index: 2; /* Set a higher z-index value */
 }
+
+/* Estilos del login */
+#Login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #F9F9F9; /* Fondo blanco */
+    border: 2px solid #252B48; /* Marco sólido */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    border-radius: 10px; /* Bordes redondeados */
+    z-index: 1; /* Set a lower z-index value */
+}
+
 
 .side-menu header {
     text-align: center;
