@@ -19,7 +19,7 @@ function agregarFila(id, rol, nombre) {
         <td>${rol}</td>
         <td>${nombre}</td>
         <td><button class="EditarBtn">Editar</button></td>
-        <td><button class="EliminarBtn">Borrar</button></td>
+        <td><button class="EliminarBtn">Eliminar</button></td>
     `;
     userTable.appendChild(newRow);
 }

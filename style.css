@@ -176,30 +176,36 @@ hr{
     border-radius: 16px;
     cursor: pointer; 
     font-size: 20px;
+    transition: all 0.3s; /* Animación de transición */
 }
+
+#Login #Succes:hover {
+    background-color: #00FFCA;
+    transform: scale(1.1); /* Escala del botón al hacer hover */
+}
+
 
 #Login #Cancelar {
     height: 45px;
     width: 250px;
     padding: 3px 5px; /* Tamaño reducido de los botones */
-    background-color:#F9F9F9;
+    background-color: #F9F9F9;
     color: red;
     border: none;
     border-radius: 16px;
     cursor: pointer;
+    transition: all 0.3s;
 }
 
-#Login #Cancelar:hover{
+#Login #Cancelar:hover {
     border: solid 3px;
-   
-    
+    transform: scale(1.1); /* Escala del botón al hacer hover */
+    background-color: #FFD0D0; /* Cambio de color de fondo al hacer hover */
+    color: darkred; /* Cambio de color de texto al hacer hover */
 }
 
-#Login #Succes:hover{
-    background-color: #00FFCA;
-    
-    
-}
+
+
 
 
 
