@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Sedgwick Ave Display', sans-serif;
-    font-size: 40px;
+    /* font-size: 40px; */
 }
 
 body {
@@ -81,25 +81,13 @@ body {
     z-index: 2; /* Set a higher z-index value */
 }
 
-/* Estilos del login */
-#Login {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    padding: 20px;
-    background-color: #F9F9F9; /* Fondo blanco */
-    border: 2px solid #252B48; /* Marco sólido */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-    border-radius: 10px; /* Bordes redondeados */
-    z-index: 1; /* Set a lower z-index value */
-}
+
 
 
 .side-menu header {
     text-align: center;
     color: white;
+    font-size: 30px;
 }
 
 .side-menu ul {
@@ -140,6 +128,7 @@ hr{
     color: black;
 }
 /* Estilos del login */
+
 #Login {
     position: fixed;
     top: 50%;
@@ -151,8 +140,8 @@ hr{
     border: 2px solid #252B48; /* Marco sólido */
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra */
     border-radius: 10px; /* Bordes redondeados */
+    z-index: 1; /* Set a lower z-index value */
 }
-
 #Login header {
     text-align: center;
     font-size: 50px;
@@ -167,6 +156,7 @@ hr{
 #Login label {
     margin-bottom: 5px;
     color: #352F44;
+    font-size: 25px;
 }
 
 #Login input {
@@ -185,6 +175,7 @@ hr{
     border: none;
     border-radius: 16px;
     cursor: pointer; 
+    font-size: 20px;
 }
 
 #Login #Cancelar {
@@ -210,14 +201,45 @@ hr{
     
 }
 
-#Login button:first-child {
-    background-color: #ccc;
-    margin-right: 10px;
+
+
+/* Estilos de la tabla AdminUsers */
+.Tabla {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    table-layout: fixed;
 }
 
+.Tabla th {
+    background-color: #252B48;
+    color: white;
+    padding: 12px;
+}
 
+.Tabla tr {
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+}
 
-#Login button:first-child:hover {
-    background-color: #e2f1f8;
-    color: #252B48;
+/* Estilos de los botones de Editar y Eliminar */
+.EditarBtn,
+.EliminarBtn {
+    padding: 8px 16px;
+    background-color: #59CE8F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.EditarBtn:hover,
+.EliminarBtn:hover {
+    background-color: #00FFCA;
+}
+size: 20px;
 }
