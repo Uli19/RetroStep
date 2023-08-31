@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;1,6..12,400&family=Roboto+Mono:wght@200&family=Sedgwick+Ave+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 /* Estilos generales */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Sedgwick Ave Display', sans-serif;
+    font-family: 'Manrope', sans-serif;
     /* font-size: 40px; */
 }
 
 body {
-    background-color: #445069;
+    /* Imagen de fondo */
+    background-image: url("./img/snkrsBackground.jpg") ; 
+    background-size: cover;
 }
 
 /* Estilos del encabezado */
@@ -21,6 +24,7 @@ body {
     align-items: center;
     height: 85px;
     padding: 5px 10%;
+
 }
 /* Estilos del logo */
 .header .logo {
@@ -42,6 +46,8 @@ body {
     color: beige;
     padding: 0 20px;
     transition: all 0.3s;
+    font-weight: 800;
+    /* font-family: 'Crimson Text', serif; */
 }
 
 .header div h1:hover {
@@ -134,11 +140,11 @@ hr{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 500px;
     padding: 20px;
     background-color: #F9F9F9; /* Fondo blanco */
-    border: 2px solid #252B48; /* Marco sólido */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+    /* border: 2px solid #252B48; Marco sólido */
+    box-shadow: -20px 40px 40px 10px rgba(0, 0, 0, 0.3); /* Sombra */
     border-radius: 10px; /* Bordes redondeados */
     z-index: 1; /* Set a lower z-index value */
 }
@@ -146,11 +152,13 @@ hr{
     text-align: center;
     font-size: 50px;
     margin-bottom: 5px;
+    font-weight: 200;
 }
 
 #Login form {
     display: flex;
     flex-direction: column;
+    font-weight: 500;
 }
 
 #Login label {
@@ -177,6 +185,7 @@ hr{
     cursor: pointer; 
     font-size: 20px;
     transition: all 0.3s; /* Animación de transición */
+    align-self: center;
 }
 
 #Login #Succes:hover {
@@ -195,6 +204,7 @@ hr{
     border-radius: 16px;
     cursor: pointer;
     transition: all 0.3s;
+    align-self: center;
 }
 
 #Login #Cancelar:hover {
