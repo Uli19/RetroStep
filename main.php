@@ -1,3 +1,7 @@
+<?php
+    $conexion=mysqli_connect('localhost','root','psyduck56','retrostepdb');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,30 +66,44 @@
         </tr>
         <tr>
             <td>Modelo</td>
-            <td>Nombre</td>
             <td>Marca</td>
             <td>Talla</td>
             <td>Precio</td>
             <td>Stock</td>
-           
         </tr>
+
+        <?php
+            $sql ="SELECT * from sneakers";
+            $result=mysqli_query($conexion,$sql);
+
+            while($mostrar=mysqli_fetch_array($result)){
+        ?>
+        <!-- ... (código HTML anterior) ... -->
+
+        <tr>
+            <td><?php echo $mostrar['Modelo']?></td>
+            <td><?php echo $mostrar['Marca']?></td>
+            <td><?php echo $mostrar['Size']?></td>
+            <td><?php echo $mostrar['Precio']?></td>
+            <td><?php echo $mostrar['Stock']?></td>
+            <td>
+                <a href="">
+                    <button class="editar">Editar</button>
+                </a>
+            </td>
+            <td>
+                <a href="">
+                    <button class="eliminar">Eliminar</button>
+                </a>
+            </td>
+        </tr>
+
+
+        <?php
+        }
+        ?>
     </table>
     
     <script src="app.js"></script>
-    <script>
-        // Escucha el evento submit del formulario
-        document.querySelector("form").addEventListener("submit", function(event) {
-            // Evita que el formulario se envíe automáticamente
-            event.preventDefault();
-
-            // Envía el formulario
-            this.submit();
-
-            // Redirige a main.html después de 2 segundos (puedes ajustar el tiempo)
-            setTimeout(function() {
-                window.location.href = "main.html";
-            }, 2000); // 2000 milisegundos = 2 segundos
-        });
-    </script>
 </body>
 </html>

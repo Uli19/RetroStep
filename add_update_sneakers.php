@@ -50,7 +50,7 @@ if ($stmt_verificar = $conexion->prepare($sql_verificar)) {
             // Ejecutar la consulta de inserción
             if ($stmt_insertar->execute()) {
                 echo "Los datos se han agregado correctamente.";
-                header("Location: main.html");
+                header("Location: main.php");
 
             } else {
                 echo "Error al agregar los datos: " . $stmt_insertar->error;
