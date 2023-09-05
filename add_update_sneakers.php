@@ -19,24 +19,51 @@ $precio = $_POST["Precio"];
 $stock = $_POST["Stock"];
 $size = $_POST["Size"];
 
-// Preparar la consulta SQL
-$sql = "INSERT INTO sneakers (Marca, Modelo, Precio, Stock, Size) VALUES (?, ?, ?, ?, ?)";
+// Verificar si ya existe un registro con el mismo modelo y talla
+$sql_verificar = "SELECT COUNT(*) AS count FROM sneakers WHERE Modelo = ? AND Size = ?";
 
-if ($stmt = $conexion->prepare($sql)) {
+if ($stmt_verificar = $conexion->prepare($sql_verificar)) {
     // Vincular los parámetros
-    $stmt->bind_param("ssdii", $marca, $modelo, $precio, $stock, $size);
+    $stmt_verificar->bind_param("si", $modelo, $size);
 
-    // Ejecutar la consulta
-    if ($stmt->execute()) {
-        echo "Los datos se han agregado correctamente.";
+    // Ejecutar la consulta de verificación
+    $stmt_verificar->execute();
+    
+    // Obtener el resultado
+    $stmt_verificar->bind_result($count);
+    $stmt_verificar->fetch();
+
+    // Cerrar la consulta de verificación
+    $stmt_verificar->close();
+
+    // Si count es mayor que 0, ya existe un registro con los mismos valores
+    if ($count > 0) {
+        echo "Ya existe un registro con el mismo modelo y talla.";
     } else {
-        echo "Error al agregar los datos: " . $stmt->error;
-    }
+        // Si no existe, proceder con la inserción
+        $sql_insertar = "INSERT INTO sneakers (Marca, Modelo, Precio, Stock, Size) VALUES (?, ?, ?, ?, ?)";
 
-    // Cerrar la consulta
-    $stmt->close();
+        if ($stmt_insertar = $conexion->prepare($sql_insertar)) {
+            // Vincular los parámetros
+            $stmt_insertar->bind_param("ssdii", $marca, $modelo, $precio, $stock, $size);
+
+            // Ejecutar la consulta de inserción
+            if ($stmt_insertar->execute()) {
+                echo "Los datos se han agregado correctamente.";
+                header("Location: main.html");
+
+            } else {
+                echo "Error al agregar los datos: " . $stmt_insertar->error;
+            }
+
+            // Cerrar la consulta de inserción
+            $stmt_insertar->close();
+        } else {
+            echo "Error en la preparación de la consulta de inserción: " . $conexion->error;
+        }
+    }
 } else {
-    echo "Error en la preparación de la consulta: " . $conexion->error;
+    echo "Error en la preparación de la consulta de verificación: " . $conexion->error;
 }
 
 // Cerrar la conexión a la base de datos
