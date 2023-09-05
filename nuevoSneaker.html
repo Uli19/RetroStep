@@ -47,16 +47,18 @@
     <div id="addSneaker">
         <header>Sneaker</header>
         
-        <form action="">
+        <form action="add_update_sneakers.php" method="post">
             <label for="Modelo">Modelo</label>
-            <input>
+            <input name="Modelo" type="text" required>
             <label for="Marca">Marca</label>
-            <input> <label for="Precio">Precio</label>
-            <input>
+            <input name="Marca" type="text" required>
+            <label for="Precio">Precio</label>
+            <input name="Precio" type="number" required>
             <label for="Stock">Stock</label>
-            <input>
+            <input name="Stock" type="number" required>
             <label for="Size">Size</label>
-            <select name="Size">
+            <input type="number" name="Size" required>
+            <!-- <select name="Size" type="number">
                 <option value="3">3</option>
                 <option value="3.5">3.5</option>
                 <option value="4">4</option>
@@ -78,18 +80,13 @@
                 <option value="12">12</option>
                 <option value="13">13</option>
                 <option value="14">14</option>
-
-
-
-
-
             </select>
             
-    
+     -->
             
             <button type="reset" id="Cancelar">Cancelar</button>
             
-            <button id="Succes">Agregar</button>
+            <button type="submit"  id="Succes">Agregar</button>
         </form>
     </div>
     
