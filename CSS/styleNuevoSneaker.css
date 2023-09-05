@@ -143,17 +143,21 @@ hr{
 
 #addSneaker {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px;
+    width: 80%;
+    max-width: 500px;
     padding: 20px;
-    background-color: #F9F9F9; /* Fondo blanco */
-    /* border: 2px solid #252B48; Marco sólido */
-    box-shadow: -20px 40px 40px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-    border-radius: 10px; /* Bordes redondeados */
-    z-index: 1; /* Set a lower z-index value */
+    background-color: #F9F9F9;
+    box-shadow: -20px 40px 40px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    z-index: 1;
+    margin-bottom: 100px; /* Ajusta este valor para el espacio debajo del formulario */
 }
+
+
+
 #addSneaker header {
     text-align: center;
     font-size: 50px;
