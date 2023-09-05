@@ -143,11 +143,11 @@ hr{
 
 #addSneaker {
     position: absolute;
-    top: 55%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    max-width: 500px;
+    max-width: 60%;
     padding: 20px;
     background-color: #F9F9F9;
     box-shadow: -20px 40px 40px 10px rgba(0, 0, 0, 0.3);
@@ -174,53 +174,103 @@ hr{
 #addSneaker label {
     margin-bottom: 5px;
     color: #352F44;
-    font-size: 25px;
+    font-size: 20px;
+}
+
+#addSneaker #SizeOption{
+    width: 50%;
+    padding: 8px;
+    border: 1px solid;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 #addSneaker input {
     padding: 8px;
+    width: 50%;
     margin-bottom: 10px;
-    border: 1px solid ;
-    border-radius: 4px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+#addSneaker #Image{
+    width: 35%;
+    height: 50%;
+    margin-left: 54%;
+    margin-top: auto;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-image: url(/RetroStep/img/peneLogo.jpeg);
+}
+
+#addSneaker #AddImage{
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 34%;
+    height: 6%;
+    width: 20%;
+    padding: 3px 5px;
+    background-color: #8da0ed;
+    color: rgb(255, 255, 255);
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: all 0.3s;
+    align-self: center;
+    text-align: center;
+}
+
+#addSneaker #AddImage:hover {
+    border: solid 1px;
+    background-color: #3e4df4;
+    transform: scale(1.1);/* Escala del botón al hacer hover */
+    color: rgb(255, 255, 255); 
 }
 
 #addSneaker #Succes {
-    height: 45px;
+    height: 40px;
     width: 250px;
-    padding: 3px 5px; /* Tamaño reducido de los botones */
-    background-color: #59CE8F;
-    color: white;
+    padding: 4px 5px; /* Tamaño reducido de los botones */
+    background-color: #84c987;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 16px;
     cursor: pointer; 
-    font-size: 20px;
+    font-size: 18px;
     transition: all 0.3s; /* Animación de transición */
     align-self: center;
+    text-align: center;
 }
 
 #addSneaker #Succes:hover {
-    background-color: #00FFCA;
-    transform: scale(1.1); /* Escala del botón al hacer hover */
+    border: solid 1px;
+    background-color: #16a232;
+    transform: scale(1.1);/* Escala del botón al hacer hover */
+    color: rgb(255, 255, 255); 
 }
 
 
 #addSneaker #Cancelar {
-    height: 45px;
+    margin-top: 1%;
+    height: 40px;
     width: 250px;
-    padding: 3px 5px; /* Tamaño reducido de los botones */
-    background-color: #F9F9F9;
-    color: red;
+    padding: 4px 5px; /* Tamaño reducido de los botones */
+    background-color: #c8b7b7;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 16px;
     cursor: pointer;
+    font-size: 18px;
     transition: all 0.3s;
     align-self: center;
+    text-align: center;
 }
 
 #addSneaker #Cancelar:hover {
-    border: solid 3px;
     transform: scale(1.1); /* Escala del botón al hacer hover */
-    background-color: #FFD0D0; /* Cambio de color de fondo al hacer hover */
-    color: darkred; /* Cambio de color de texto al hacer hover */
+    background-color: #c21818; /* Cambio de color de fondo al hacer hover */
+    color: rgb(255, 255, 255); /* Cambio de color de texto al hacer hover */
 }
 
