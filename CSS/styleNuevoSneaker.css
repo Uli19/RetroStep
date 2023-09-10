@@ -233,7 +233,7 @@ hr{
 
 #addSneaker #AddImage:hover {
     border: solid 1px;
-    background-color: #3e4df4;
+    background-color: #3e4eff;
     transform: scale(1.1);/* Escala del botón al hacer hover */
     color: rgb(255, 255, 255); 
 }
