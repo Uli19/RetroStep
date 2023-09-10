@@ -99,41 +99,46 @@ body {
 }
 
 #Login #Succes {
-    height: 45px;
+    height: 40px;
     width: 250px;
-    padding: 3px 5px; /* Tamaño reducido de los botones */
-    background-color: #59CE8F;
-    color: white;
+    padding: 4px 5px; /* Tamaño reducido de los botones */
+    background-color: #84c987;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 16px;
     cursor: pointer; 
-    font-size: 20px;
+    font-size: 18px;
     transition: all 0.3s; /* Animación de transición */
     align-self: center;
+    text-align: center;
 }
 
 #Login #Succes:hover {
-    background-color: #00FFCA;
-    transform: scale(1.1); /* Escala del botón al hacer hover */
+    border: solid 1px;
+    background-color: #16a232;
+    transform: scale(1.1);/* Escala del botón al hacer hover */
+    color: rgb(255, 255, 255); 
 }
 
 
 #Login #Cancelar {
-    height: 45px;
+    margin-top: 1%;
+    height: 40px;
     width: 250px;
-    padding: 3px 5px; /* Tamaño reducido de los botones */
-    background-color: #F9F9F9;
-    color: red;
+    padding: 4px 5px; /* Tamaño reducido de los botones */
+    background-color: #c8b7b7;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 16px;
     cursor: pointer;
+    font-size: 18px;
     transition: all 0.3s;
     align-self: center;
+    text-align: center;
 }
 
 #Login #Cancelar:hover {
-    border: solid 3px;
     transform: scale(1.1); /* Escala del botón al hacer hover */
-    background-color: #FFD0D0; /* Cambio de color de fondo al hacer hover */
-    color: darkred; /* Cambio de color de texto al hacer hover */
+    background-color: #c21818; /* Cambio de color de fondo al hacer hover */
+    color: rgb(255, 255, 255); /* Cambio de color de texto al hacer hover */
 }
