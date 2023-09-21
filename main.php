@@ -1,6 +1,11 @@
 <?php
-    $conexion=mysqli_connect('localhost','root','psyduck56','retrostepdb');
-
+    $conexion=mysqli_connect('localhost','root','','retrostep');
+    if(!$conexion){
+        echo "no se conecto";
+    }
+    else{
+        echo "sis se conecto putaa¿";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
